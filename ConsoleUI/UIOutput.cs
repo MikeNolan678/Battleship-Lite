@@ -8,6 +8,7 @@ namespace ConsoleUI
 {
     public class UIOutput
     {
+        //Print a welcome message in the Console, and provide a summary of the instructions.
         public static void WelcomeMessage()
         {
             Console.WriteLine();
@@ -22,7 +23,7 @@ namespace ConsoleUI
             Console.WriteLine("------------------------------------------------------------------------\n");
         }
 
-
+        //Print a message on the console, subject to the outcome of the shot played by the player.
         public static void HitOrMissMessage(bool shotIsHit)
         {
             if (shotIsHit)

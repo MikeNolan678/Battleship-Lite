@@ -10,6 +10,12 @@ namespace BattleshipLibrary
 {
     public class BattleshipLogic
     {
+        /// <summary>
+        /// This method takes the user position input, and places the ship in a list of GridSpotModel objects. 
+        /// The list of the players' ships can be added to the PlayerInfoModel.
+        /// </summary>
+        /// <param name="userInputShipPositions"></param>
+        /// <returns></returns>
         public static List<GridSpotModel> PlaceBattleShip(List<string> userInputShipPositions)
         {
             List<GridSpotModel> shipPositions = new List<GridSpotModel>();
@@ -22,6 +28,11 @@ namespace BattleshipLibrary
             return shipPositions;
         }
 
+        /// <summary>
+        /// Verify if the game is over, and if all of a users ships have been sunk.
+        /// </summary>
+        /// <param name="playerShips"></param>
+        /// <returns></returns>
         public static bool IsGameOver (List<GridSpotModel> playerShips) 
         {
         
@@ -35,6 +46,14 @@ namespace BattleshipLibrary
             return true;
         }
 
+        /// <summary>
+        /// Takes the shot input, and determines if it was a hit ot a miss. 
+        /// Updates the appropriate list of ships with the correct GridSpotStatus.
+        /// </summary>
+        /// <param name="ships"></param>
+        /// <param name="shot"></param>
+        /// <param name="shots"></param>
+        /// <returns></returns>
         public static (List<GridSpotModel> ships, List<GridSpotModel> shots, bool shotIsHit) ShootAtOpponent (List<GridSpotModel> ships, GridSpotModel shot, List<GridSpotModel> shots) 
         {
             if (shots == null)
@@ -46,6 +65,7 @@ namespace BattleshipLibrary
 
             foreach (GridSpotModel ship in ships)
             {
+                //Check if the shot is a hit and update the GridSpotStatus
                 if (ship.Status == GridSpotStatus.Ship && ship.SpotLetter == shot.SpotLetter && ship.SpotNumber == shot.SpotNumber) 
                 {
                     ship.Status = GridSpotStatus.Hit;
@@ -66,6 +86,12 @@ namespace BattleshipLibrary
             return (ships, shots, shotIsHit);
         }
 
+        /// <summary>
+        /// Checks whether the shot has already been made, and ensures the player cannot submit a duplicate shot. 
+        /// </summary>
+        /// <param name="player"></param>
+        /// <param name="shotAsGridSpot"></param>
+        /// <returns></returns>
         public static bool ShotAlreadyExists (PlayerInfoModel player, GridSpotModel shotAsGridSpot)
         {
             if (player == null || player.ShotGrid == null || shotAsGridSpot == null)

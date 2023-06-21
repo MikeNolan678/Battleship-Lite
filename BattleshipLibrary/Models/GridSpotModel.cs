@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
+//Object used to clasify both the position and status of that position.
 namespace BattleshipLibrary.Models
 {
     public class GridSpotModel
@@ -19,6 +19,7 @@ namespace BattleshipLibrary.Models
             }
             set
             {
+                //Validates that the letter is within the expected range of the grid.
                 if (value == "a" ||
                     value == "b" ||
                     value == "c" ||
@@ -39,6 +40,7 @@ namespace BattleshipLibrary.Models
         public int SpotNumber { get; set; }
         public GridSpotStatus Status { get; set; } = GridSpotStatus.Empty;
 
+        //Converts string input from the user into the GridSpotModel object
         public static GridSpotModel ConvertInputStringToGridSpot(string position, GridSpotStatus GridSpotStatus)
         {
             GridSpotModel gridSpot = new GridSpotModel();
@@ -60,6 +62,7 @@ namespace BattleshipLibrary.Models
             return gridSpot;
         }
 
+        //Verifies that the position input by the user (as a string) is a valid position on the grid, and is in the correct format (XY)
         public static bool InputStringIsValidPosition(string position)
         {
 

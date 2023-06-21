@@ -12,18 +12,24 @@ namespace ConsoleUI
 {
     public class PlayerMethods
     {
+        //Asks the user for their name.
         public static string GetPlayerName(int PlayerNumber)
         {
             Console.Write($"Enter player {PlayerNumber} name: ");
             return Console.ReadLine();
         }
 
+        /// <summary>
+        /// Asks the user for the placement of their ships. The list is converted to an object using methods in the GridSpotModel class
+        /// </summary>
+        /// <returns></returns>
         public static List<string> GetUserShipPlacements()
         {
             List<string> userInputShipPositions = new List<string>();
             
             int count = 1;
 
+            //The user will enter 5x ship placements
             while (count <= 5)
             {
                 Console.Write($"Enter ship {count} position (eg. A{count}): ");
@@ -49,7 +55,11 @@ namespace ConsoleUI
 
             return userInputShipPositions;
         }
-
+        /// <summary>
+        /// Gets the shot position from the user, and converts to GridSpotModel object. 
+        /// </summary>
+        /// <param name="player"></param>
+        /// <returns></returns>
         public static GridSpotModel GetUserShot(PlayerInfoModel player)
         {
             bool isValidShot;
@@ -83,6 +93,12 @@ namespace ConsoleUI
             return shotAsGridSpot;
         }
 
+        /// <summary>
+        /// Calculates the number of ships that are remaining (ie. haven't been hit). 
+        /// This is used to display a score in the UI.
+        /// </summary>
+        /// <param name="ships"></param>
+        /// <returns></returns>
         public static int RemainingShips (List<GridSpotModel> ships)
         {
             int count = 0;

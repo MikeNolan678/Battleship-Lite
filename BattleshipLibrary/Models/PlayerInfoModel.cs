@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BattleshipLibrary.Models
 {
+    //The object assigned to each player, to record their details, including the position of their ships, and of the shots they have placed. 
     public class PlayerInfoModel
     {
         public string Name { get; set; }
