@@ -1,0 +1,72 @@
+﻿UI Design
+
+Welcome Message
+
+User 1
+Ask for name
+Ask for ship placements
+Determine if valid
+Store
+Clear
+
+User 2
+Ask for name
+Ask for ship placements
+Determine if valid
+Store
+Clear
+
+Display grid of where user has fired
+
+User 1
+Where would you like to fire? 
+Is a valid spot?
+Check Result
+Store Shot
+Clear
+
+Repeat with user 2
+
+Loop until someone wins
+
+Print winners name and number of shots taken
+
+Wait for user to say they are done
+
+Exit
+
+
+Grid Design 
+
+A1 A2 A3 A4  O
+B2 B2  X B4 B5
+C1 C2 C3 C4  O
+D2 D2  X D4 D5
+ O E2 E3  X E5
+
+
+Logic Design 
+
+Clear Display 
+Method: Ask for name
+Method: Get ship placement
+Method: Determine if ship is valid spot
+Storing ship information: list per user?
+Storing shot information: list per user? 
+Method: create the grid for each user
+Method: fire on opponent 
+Method: determine if a shot can be taken & outcome
+Method: display score
+MethidL print winner and shots taken
+
+Data design
+
+PlayerInfo
+User Name - string
+User's 5 ships location - List<GridSpot>
+User's shot grid - List<GridSpot>
+
+GridSpot object
+SpotLetter - string
+SpotNumber - int
+Status (possible enum)
