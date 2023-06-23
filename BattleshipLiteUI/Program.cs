@@ -1,8 +1,8 @@
-﻿using BattleshipLibrary;
-using BattleshipLibrary.Models;
+﻿using BattleshipLiteLibrary;
+using BattleshipLiteLibrary.Models;
 using System.Collections.Concurrent;
 
-namespace ConsoleUI
+namespace BattleshipLiteUI
 {
     internal class Program
     {

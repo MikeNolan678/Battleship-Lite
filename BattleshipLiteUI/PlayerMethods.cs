@@ -1,12 +1,12 @@
-﻿using BattleshipLibrary;
-using BattleshipLibrary.Models;
+﻿using BattleshipLiteLibrary;
+using BattleshipLiteLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleUI
+namespace BattleshipLiteUI
 {
     public class PlayerMethods
     {
@@ -24,7 +24,7 @@ namespace ConsoleUI
         public static List<string> GetUserShipPlacements()
         {
             List<string> userInputShipPositions = new List<string>();
-            
+
             int count = 1;
 
             //The user will enter 5x ship placements
@@ -74,7 +74,7 @@ namespace ConsoleUI
                     isValidShot = GridSpotModel.InputStringIsValidPosition(shotPosition.ToLower());
                     shotAsGridSpot = GridSpotModel.ConvertInputStringToGridSpot(shotPosition, GridSpotStatus.Shot);
 
-                    if (BattleshipLogic.ShotAlreadyExists(player, shotAsGridSpot)) 
+                    if (BattleshipLogic.ShotAlreadyExists(player, shotAsGridSpot))
                     {
                         throw new Exception("You have already made this shot!");
                     }
@@ -85,9 +85,9 @@ namespace ConsoleUI
                     shotPosition = Console.ReadLine();
                     isValidShot = false;
                 }
-                
+
             } while (!isValidShot);
-               
+
             return shotAsGridSpot;
         }
 
@@ -97,7 +97,7 @@ namespace ConsoleUI
         /// </summary>
         /// <param name="ships"></param>
         /// <returns></returns>
-        public static int RemainingShips (List<GridSpotModel> ships)
+        public static int RemainingShips(List<GridSpotModel> ships)
         {
             int count = 0;
 

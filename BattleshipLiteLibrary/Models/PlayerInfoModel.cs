@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BattleshipLibrary.Models
+namespace BattleshipLiteLibrary.Models
 {
     //The object assigned to each player, to record their details, including the position of their ships, and of the shots they have placed. 
     public class PlayerInfoModel

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 //Object used to clasify both the position and status of that position.
-namespace BattleshipLibrary.Models
+namespace BattleshipLiteLibrary.Models
 {
     public class GridSpotModel
     {

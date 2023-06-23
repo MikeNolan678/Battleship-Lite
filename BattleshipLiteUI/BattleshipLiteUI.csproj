@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BattleshipLibrary\BattleshipLiteLibrary.csproj" />
+    <ProjectReference Include="..\BattleshipLiteLibrary\BattleshipLiteLibrary.csproj" />
   </ItemGroup>
 
 </Project>
