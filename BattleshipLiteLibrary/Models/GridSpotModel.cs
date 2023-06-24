@@ -32,10 +32,8 @@ namespace BattleshipLiteLibrary.Models
                 {
                     throw new IndexOutOfRangeException("Spot Letter value must be between A - E");
                 }
-
             }
         }
-
 
         public int SpotNumber { get; set; }
         public GridSpotStatus Status { get; set; } = GridSpotStatus.Empty;
