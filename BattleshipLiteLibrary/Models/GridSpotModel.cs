@@ -77,11 +77,11 @@ namespace BattleshipLiteLibrary.Models
                         position.Substring(0, 1).ToLower() == "d" ||
                         position.Substring(0, 1).ToLower() == "e")
             {
-                if (position.Substring(1, 1).ToLower() == "1" ||
-                        position.Substring(1, 1).ToLower() == "2" ||
-                        position.Substring(1, 1).ToLower() == "3" ||
-                        position.Substring(1, 1).ToLower() == "4" ||
-                        position.Substring(1, 1).ToLower() == "5")
+                if (position.Substring(1, 1) == "1" ||
+                        position.Substring(1, 1) == "2" ||
+                        position.Substring(1, 1) == "3" ||
+                        position.Substring(1, 1) == "4" ||
+                        position.Substring(1, 1) == "5")
                 {
                     return true;
                 }
