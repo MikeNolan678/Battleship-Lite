@@ -2,9 +2,6 @@
 
 The project is an implementation of a two-player game in a console application, inspired by the boardgame 'Battleships'. It's built entirely in C#, designed to be simple and user-friendly.
 
-## Getting Started
-To get a local copy up and running follow these simple steps:
-
 ## Prerequisites
 This application was built with .NET 5.0. You will need the .NET 5.0 SDK or later installed.
 
