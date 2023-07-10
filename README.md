@@ -1,6 +1,6 @@
 # Battleship Lite 
 
-The project is an implementation of a two-player game in a console application, inspired by the boardgame 'Battleships'. It's developed in C#, designed to be simple and user-friendly.
+The project is an implementation of a two-player game in a console application, inspired by the boardgame 'Battleships'. It's built entirely in C#, designed to be simple and user-friendly.
 
 ## Getting Started
 To get a local copy up and running follow these simple steps:
@@ -13,12 +13,16 @@ You can download it from here: https://dotnet.microsoft.com/download
 ## Installation
 1. Open your terminal and clone the repository with the following command:
 
+```sh
    git clone https://github.com/MikeNolan678/BattleshipGame.git
+```
 
 ## Usage
 1. To run the game, navigate to the project directory, use the command:
 
+```sh
     dotnet run
+```
 
 2. The game will guide you through the setup and gameplay.
 
